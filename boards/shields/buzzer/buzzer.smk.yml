@@ -1,0 +1,14 @@
+file_format: "1"
+id: buzzer
+name: Wireless Buzzer
+type: shield
+url: ""
+requires: [pro_micro]
+features:
+  - studio
+layouts:
+  default:
+    name: Default
+    transform: '&default_transform'
+    keys:
+      - {x: 0, y: 0, width: 1, height: 1}

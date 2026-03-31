@@ -1,0 +1,4 @@
+if SHIELD_BUZZER
+config ZMK_KEYBOARD_NAME
+    default "Wireless Buzzer"
+endif
