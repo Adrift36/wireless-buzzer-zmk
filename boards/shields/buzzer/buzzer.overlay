@@ -3,19 +3,15 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix-transform = &default_transform;
-        zmk,physical-layout = &physical_layout0;
+        zmk,kscan = <&kscan0>;
+        zmk,matrix-transform = <&default_transform>;
+        zmk,physical-layout = <&physical_layout0>;
     };
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
         input-gpios = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        
-        /* Fix for multiple presses (Chattering) */
-        debounce-press-ms = <15>;
-        debounce-release-ms = <15>;
     };
 
     default_transform: keymap_transform_0 {
