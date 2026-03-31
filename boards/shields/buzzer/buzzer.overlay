@@ -11,6 +11,10 @@
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
         input-gpios = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        
+        /* Increase debounce to filter out breadboard noise and bouncy switches */
+        debounce-press-ms = <15>;
+        debounce-release-ms = <15>;
     };
 
     default_transform: keymap_transform_0 {
